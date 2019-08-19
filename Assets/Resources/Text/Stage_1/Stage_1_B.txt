@@ -1,0 +1,12 @@
+int i0 = 0;
+int i1 = 3;
+int i2 = 5;
+
+if(i0>9)
+ i0=0;
+if(i1>9)
+ i1=0;
+if(i2>9)
+ i2=0;
+<color=#00ff00>if(i0==i1 && i1==i2)
+  gate1Open();</color>

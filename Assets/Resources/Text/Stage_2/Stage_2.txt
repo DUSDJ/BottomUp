@@ -1,0 +1,10 @@
+bool b1 = false;
+bool b2 = false;
+bool b3 = true;
+if(b2)
+ gate1Open();
+else if(b1 && b3)
+  gate2Open();
+
+if(time == 1200) // ms
+  EnemyMoveFor10Sec();
