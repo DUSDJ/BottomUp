@@ -136,14 +136,21 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /* 타이틀 화면으로 이동 */
-        if (Input.GetButtonDown("Cancel") || Input.GetButtonUp("Fire2"))
+        /* 타이틀 화면으로 이동 VR*/
+        if (GameManager.VRMode && Input.GetButtonUp("Fire2"))
+        {
+            SceneManager.LoadScene(0);
+        }
+
+
+        /* 타이틀 화면으로 이동 일반*/
+        if (!GameManager.VRMode  && Input.GetButtonDown("Cancel"))
         {
             SceneManager.LoadScene(0);
         }
 
         /* 임시 VR 전환 버튼 : VR 장착 시 삭제 */
-        if (Input.GetButtonUp("Fire3"))
+        if (Input.GetButtonUp("Jump"))
         {
             GameManager.VRMode = !GameManager.VRMode;
         }
